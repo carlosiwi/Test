@@ -413,6 +413,188 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 }
 .site-footer a:hover { color: var(--accent); }
 
+/* ---------- Case study pages ---------- */
+
+.breadcrumb {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+}
+.breadcrumb:hover { color: var(--accent); }
+
+.cs-hero { padding-block: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 3vw, 2.5rem); }
+
+.cs-hero h1 {
+  font-size: clamp(2.1rem, 5.5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-block: 0.75rem 1.25rem;
+}
+.cs-hero h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--accent), #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cs-intro {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+}
+.cs-intro strong { color: var(--text); }
+
+.cs-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.cs-facts > div {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+}
+.cs-facts dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.cs-facts dd { font-size: 0.95rem; color: var(--text-muted); }
+
+.cs-impact { padding-block: clamp(1.5rem, 3vw, 2.5rem); }
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+.impact-item {
+  background: linear-gradient(135deg, var(--accent-soft), var(--bg-elev));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.impact-item strong {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+.impact-item span { color: var(--text-muted); font-size: 0.9rem; }
+
+.cs-section { padding-block: clamp(2rem, 4vw, 3rem); }
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.cs-grid > h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  position: sticky;
+  top: 5.5rem;
+}
+
+.cs-content h3 { font-size: 1.2rem; margin-block: 1.5rem 0.6rem; }
+.cs-content p { color: var(--text-muted); margin-bottom: 1rem; max-width: 44rem; }
+.cs-content p strong, .cs-list strong { color: var(--text); }
+
+.cs-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  max-width: 44rem;
+}
+.cs-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-muted);
+}
+.cs-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.cs-quote {
+  border-left: 3px solid var(--accent);
+  background: var(--bg-elev);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.4rem 1.75rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-block: 1.5rem;
+  max-width: 44rem;
+}
+
+.cs-figure { margin-block: 1.75rem; max-width: 44rem; }
+.cs-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  color: rgb(255 255 255 / 0.92);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: center;
+  padding: 1rem;
+}
+.cs-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.6rem;
+}
+
+.cs-next { padding-block: clamp(2rem, 4vw, 3rem); }
+.cs-next-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.next-card {
+  display: block;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+}
+.next-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
+}
+.next-card h3 { font-size: 1.25rem; margin-block: 0.4rem 0.5rem; }
+.next-card > p:last-child { color: var(--text-muted); font-size: 0.95rem; }
+
+@media (max-width: 760px) {
+  .cs-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .cs-grid > h2 { position: static; }
+}
+
 /* ---------- Reveal on scroll ---------- */
 
 .reveal {

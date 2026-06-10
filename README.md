@@ -6,6 +6,7 @@ Rediseño del portfolio de Carlos Iwi, enfocado a la búsqueda de empleo como
 ## Estructura
 
 - `index.html` — página principal (one-page)
+- `genially-favorites.html` — case study de Genially · Favorites
 - `styles.css` — estilos (light/dark, responsive, sin frameworks)
 - `script.js` — toggle de tema, menú móvil, animaciones de scroll
 
@@ -30,3 +31,7 @@ Rediseño del portfolio de Carlos Iwi, enfocado a la búsqueda de empleo como
 - [ ] Sustituir los bloques de color de los case studies por capturas reales
       de cada proyecto.
 - [ ] Revisar/ajustar el copy del hero y el "About" al tono personal de Carlos.
+- [ ] Case study Favorites: sustituir los placeholders (`.cs-placeholder`) por
+      las imágenes reales (journey map, Crazy 8's, UI final) y verificar las
+      métricas (2.2 → 2.8, >70 % de éxito, 50 testers, 22 días) contra el
+      contenido original.
