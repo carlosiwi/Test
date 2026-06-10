@@ -216,12 +216,18 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 
 /* ---------- Work / case cards ---------- */
 
-.case-card { margin-bottom: 1.75rem; }
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.case-card { display: flex; }
 
 .case-link {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   background: var(--bg-elev);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -238,7 +244,7 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 220px;
+  min-height: 180px;
 }
 .case-visual span {
   font-family: var(--font-display);
@@ -252,7 +258,13 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 .case-visual.glamping     { background: linear-gradient(135deg, #047857, #65a30d); }
 .case-visual.hotelbeds    { background: linear-gradient(135deg, #0369a1, #14b8a6); }
 
-.case-body { padding: 1.75rem 2rem; }
+.case-body {
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.case-body .case-cta { margin-top: auto; }
 
 .case-meta {
   font-size: 0.8rem;
@@ -285,28 +297,6 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 .tags-lg li { font-size: 0.9rem; padding: 0.4rem 1rem; }
 
 .case-cta { font-weight: 600; color: var(--accent); font-size: 0.95rem; }
-
-/* ---------- Process ---------- */
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.25rem;
-}
-.process-item {
-  background: var(--bg-elev);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.6rem;
-}
-.process-num {
-  font-family: var(--font-display);
-  font-weight: 800;
-  color: var(--accent);
-  font-size: 0.9rem;
-}
-.process-item h3 { font-size: 1.1rem; margin-block: 0.5rem; }
-.process-item p { color: var(--text-muted); font-size: 0.95rem; }
 
 /* ---------- Experience ---------- */
 
@@ -646,7 +636,7 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
   }
   .nav-links.open { display: flex; }
 
-  .case-link { grid-template-columns: 1fr; }
+  .work-grid { grid-template-columns: 1fr; }
   .case-visual { min-height: 150px; }
 
   .about-grid { grid-template-columns: 1fr; }
