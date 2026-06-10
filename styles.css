@@ -218,8 +218,8 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
 }
 
 .case-card { display: flex; }
@@ -244,12 +244,12 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 180px;
+  min-height: 140px;
 }
 .case-visual span {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   color: rgb(255 255 255 / 0.92);
   letter-spacing: -0.02em;
 }
@@ -259,7 +259,7 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 .case-visual.hotelbeds    { background: linear-gradient(135deg, #0369a1, #14b8a6); }
 
 .case-body {
-  padding: 1.75rem 2rem;
+  padding: 1.25rem 1.4rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -267,16 +267,15 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 .case-body .case-cta { margin-top: auto; }
 
 .case-meta {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
-.case-body h3 { font-size: 1.35rem; margin-bottom: 0.6rem; }
-.case-body > p { color: var(--text-muted); margin-bottom: 1rem; }
+.case-body h3 { font-size: 1.2rem; margin-bottom: 0.7rem; }
 
 .tags {
   list-style: none;
@@ -296,7 +295,11 @@ section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
 }
 .tags-lg li { font-size: 0.9rem; padding: 0.4rem 1rem; }
 
-.case-cta { font-weight: 600; color: var(--accent); font-size: 0.95rem; }
+.case-cta { font-weight: 600; color: var(--accent); font-size: 0.9rem; }
+
+@media (max-width: 1024px) {
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ---------- Experience ---------- */
 
